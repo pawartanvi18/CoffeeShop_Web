@@ -3,15 +3,19 @@ from django.http import HttpResponse
 from .models import Coffee, Cart
 from django.contrib.auth.decorators import login_required
 
-def home(request):
-    app1 = Coffee.objects.all()
-    return render(request, 'home.html', {'coffee': app1})
-
 
 
 def home(request):
     app1 = Coffee.objects.all()
     return render(request, 'home.html', {'coffee': app1})
+
+
+
+def home(request):
+    app1 = Coffee.objects.all()
+    return render(request, 'home.html', {'coffee': app1})
+
+
 
 
 def add_to_cart(request, coffee_id):
